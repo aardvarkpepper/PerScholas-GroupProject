@@ -1,12 +1,14 @@
 import React from "react";
 
-const Product = ({title,descriptions, price, addToCart})=>{
+const Product = ({ title, descriptions, price, addToCart }) => {
     return (
         <div>
-            <div className='card h3'>{title}</div>
-            <p className='card p'>{descriptions}</p>
-            <p className='price'>{price}</p>
-            <button className = 'card button'>Smash</button>
+            <h3>{title}</h3>
+            <p>{descriptions}</p>
+            <div className = 'flex spacebetween'>
+                <p className='price'>${price}</p>
+                <button className='btn'>Add to Cart</button>
+            </div>
         </div>
     );
 };

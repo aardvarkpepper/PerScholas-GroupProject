@@ -29,42 +29,42 @@ function App() {
   return (
     <div className='container dashboard'>
       <div className='header'>
-        <div className='header h1'>Product Dashboard</div>
-        <div className='header p'>An interactive list of our top-rated products.</div>
+        <h1>Product Dashboard</h1>
+        <p>An interactive list of our top-rated products.</p>
       </div>
 
       <div className='sidebar'>
-        <div className='sidebar h2'>README.md</div>
+        <h2>README.md</h2>
         <div>
-          <div className='sidebar h2'>Per Scholas Group Project</div>
-          <div className='sidebar h2'>Project Leads</div>
-          <div className='sidebar p'>James Lee, Cintja Poreci</div>
-          <div className='sidebar h2'>Front-End Lead</div>
-          <div className='sidebar p'>Pallavi Kalshetti</div>
-          <div className='sidebar h2'>Data/Logic Lead</div>
-          <div className='sidebar p'>Aditya Wicaksono</div>
-          Based Off
-          https://torythompson1015.github.io/The-Interactive-Dashboard-Project/
+          <h2>Per Scholas Group Project</h2>
+          <h2>Project Leads</h2>
+          <p>James Lee, Cintja Poreci</p>
+          <h2>Front-End Lead</h2>
+          <p>Pallavi Kalshetti</p>
+          <h2>Data/Logic Lead</h2>
+          <p>Aditya Wicaksono</p>
+          <h2>Based Off</h2>
+          <p>https://torythompson1015.github.io/The-Interactive-Dashboard-Project/</p>
         </div>
         <h3>Search Products</h3>
-        <input className = 'sidebar input' type="text" placeholder='search products' />
+        <input type="text" placeholder='search products' />
         <h3>Project Stats</h3>
         <div>
-          Total Products:
+          Total Products: {products.length}
         </div>
         <div>
-          Displaying:
+          Displaying: {products.length}
         </div>
       </div>
+      {/* <div className='productContainer main-content cards'></div> */}
 
-      <div className='productContainer main-content cards'>
-        <div className='product-details'>
+
+        <div className='product-details cards'>
           {products.map(product => {
-            return <Product className='card' key={product.id} title={product.title} descriptions={product.description} price={product.price} addToCart={handleAddToCart} />
+            return <Product className = 'card' key={product.id} title={product.title} descriptions={product.description} price={product.price} addToCart={handleAddToCart} />
             // return <div>'X'</div>
           })}
         </div>
-      </div>
 
     </div>
 
@@ -85,7 +85,7 @@ sidebar h2 → Section titles in sidebar
 sidebar p → Sidebar text
 sidebar input→ Search bar
 
-cards → Grid container for all product cards
+cards → Grid container for all product cards  
 card → Individual product card
 card h3 → Product name/title
 card p → Product description
